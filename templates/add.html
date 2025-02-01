@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Advertisement</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+    <h2 class="text-center">Add Advertisement</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        
+        <div class="mb-3">
+            <label class="form-label">Company Name</label>
+            {{ form.company_name(class="form-control") }}
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Location</label>
+            {{ form.location(class="form-control") }}
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Renewal Date</label>
+            {{ form.renewal_date(class="form-control") }}
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Amount</label>
+            {{ form.amount(class="form-control") }}
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Advertisement Image</label>
+            {{ form.image(class="form-control") }}
+        </div>
+        
+        <button type="submit" class="btn btn-success">Submit</button>
+        <a href="/" class="btn btn-secondary">Back</a>
+    </form>
+</body>
+</html>
+
